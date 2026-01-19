@@ -1,0 +1,230 @@
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #008BFF;
+  --secondary-color: #5A9CB5;
+  --primary-dark: #006ACC;
+  --primary-light: #33A3FF;
+  --secondary-light: #7CB3C8;
+  --text-dark: #1A1A1A;
+  --text-light: #F5F5F5;
+  --text-gray: #666666;
+  --bg-light: #FFFFFF;
+  --bg-gray: #F8F9FA;
+  --border-color: #E0E0E0;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 20px rgba(0, 139, 255, 0.2);
+}
+
+body {
+  font-family: 'Heebo', 'Segoe UI', 'Arial', sans-serif;
+  direction: rtl;
+  text-align: right;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  direction: rtl;
+  text-align: right;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+}
+
+.section {
+  padding: 80px 0;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--text-dark);
+  position: relative;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    margin: 20px auto 0;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+// Button Styles
+.btn {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
+  @media (max-width: 480px) {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-light);
+  
+  &:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--primary-color);
+  
+  &:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+  }
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  
+  &:hover {
+    background: #20BA5A;
+  }
+}
+
+// Fade in animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-light {
+  background-color: var(--bg-gray);
+}
+

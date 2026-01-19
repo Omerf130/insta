@@ -1,0 +1,113 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #008BFF 0%, #5A9CB5 100%);
+  overflow: hidden;
+  
+  // Background pattern
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    z-index: 1;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    font-weight: 400;
+    line-height: 1.6;
+    
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .btn {
+      min-width: 200px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      
+      @media (max-width: 480px) {
+        width: 100%;
+        max-width: 300px;
+      }
+      
+      svg {
+        flex-shrink: 0;
+      }
+    }
+    
+    // Hide "התקשר עכשיו" button on desktop (larger than 1024px)
+    .hero-call-btn {
+      @media (min-width: 1025px) {
+        display: none;
+      }
+    }
+  }
+}
+
