@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/972501234567?text=שלום, אני מעוניין בשירותי אינסטלציה', '_blank');
+    window.open('https://wa.me/972501234567?text=שלום, אני מעוניין בהתקנת דוד שמש', '_blank');
   };
 
   return (
@@ -15,11 +15,15 @@ const Hero: React.FC = () => {
       <div className="hero-overlay"></div>
       <div className="container">
         <div className="hero-content fade-in">
+          <div className="hero-badge">
+            <span className="badge-icon">✓</span>
+            <span className="badge-text">יצא צדיק</span>
+          </div>
           <h1 className="hero-title">
-            שירותי אינסטלציה ודודי שמש מקצועיים
+            מומחים להתקנה ותיקון דודי שמש
           </h1>
           <p className="hero-subtitle">
-            מעל 15 שנות ניסיון | זמינות 24/7 | אחריות מלאה על כל עבודה
+            מעל 15 שנות ניסיון | התקנה מקצועית | תיקונים ואחזקה | אחריות מלאה
           </p>
           <div className="hero-cta">
             <button className="btn btn-primary hero-call-btn" onClick={handleCallClick}>

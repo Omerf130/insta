@@ -1,6 +1,67 @@
 .services {
   background-color: var(--bg-light);
   
+  .services-intro {
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 1.15rem;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (max-width: 768px) {
+      font-size: 1rem;
+      margin-top: -25px;
+      margin-bottom: 40px;
+    }
+  }
+  
+  .services-category {
+    margin-bottom: 60px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    &.services-category-secondary {
+      .category-title {
+        color: var(--text-gray);
+        border-color: var(--border-color);
+      }
+    }
+  }
+  
+  .category-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--primary-color);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    
+    .category-icon {
+      font-size: 2rem;
+      
+      @media (max-width: 768px) {
+        font-size: 1.7rem;
+      }
+    }
+  }
+  
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -27,6 +88,11 @@
     
     @media (max-width: 768px) {
       padding: 30px 20px;
+    }
+    
+    &.service-card-primary {
+      border-color: rgba(0, 139, 255, 0.2);
+      background: linear-gradient(to bottom, rgba(0, 139, 255, 0.03), white);
     }
     
     &:hover {

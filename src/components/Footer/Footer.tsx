@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-title">אינסטלציה ודודי שמש</h3>
+            <h3 className="footer-title">דודי שמש ואינסטלציה</h3>
             <p className="footer-description">
-              שירותי אינסטלציה מקצועיים והתקנת דודי שמש במרכז הארץ. 
-              מעל 15 שנות ניסיון, זמינות 24/7 ואחריות מלאה.
+              מומחים להתקנה ותיקון דודי שמש במרכז הארץ. 
+              מעל 15 שנות ניסיון, זמינות 24/7 ואחריות מלאה על כל עבודה.
             </p>
             <div className="footer-social">
               <a href="https://wa.me/972501234567" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
@@ -69,11 +69,11 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4 className="footer-subtitle">השירותים שלנו</h4>
             <ul className="footer-services">
-              <li>תיקוני אינסטלציה</li>
-              <li>פתיחת סתימות</li>
               <li>התקנת דודי שמש</li>
               <li>תיקון דודי שמש</li>
-              <li>אינסטלציה חדשה</li>
+              <li>שדרוג והחלפת דודים</li>
+              <li>אחזקה ותחזוקה</li>
+              <li>שירותי אינסטלציה</li>
               <li>שירות חירום 24/7</li>
             </ul>
           </div>
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © {currentYear} כל הזכויות שמורות | אינסטלציה ודודי שמש מקצועיים
+            © {currentYear} כל הזכויות שמורות | מומחים לדודי שמש ואינסטלציה
           </p>
         </div>
       </div>

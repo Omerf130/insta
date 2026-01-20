@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
               alt="לוגו אינסטלציה"
               className="logo-image"
             />
-            <span className="logo-text">אינסטלציה ודודי שמש</span>
+            <span className="logo-text">דודי שמש ואינסטלציה</span>
           </div>
 
           {/* Desktop Navigation - Right Side */}
