@@ -13,7 +13,7 @@ const WhyChooseMe: React.FC = () => {
     {
       id: 1,
       title: 'מומחים בדודי שמש',
-      description: 'מעל 15 שנות ניסיון בהתקנה, תיקון ותחזוקה של דודי שמש',
+      description: 'מעל 5 שנות ניסיון בהתקנה, תיקון ותחזוקה של דודי שמש',
       icon: (
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="5"></circle>

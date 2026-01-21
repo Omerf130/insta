@@ -75,9 +75,15 @@ const Contact: React.FC = () => {
     if (validateForm()) {
       setIsSubmitting(true);
       
-      // Simulate form submission
+      // Create WhatsApp message with form data
+      const whatsappMessage = `שלום, אני ${formData.name}%0aטלפון: ${formData.phone}%0a%0aהודעה:%0a${formData.message}`;
+      const whatsappUrl = `https://wa.me/972545907677?text=${whatsappMessage}`;
+      
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+      
+      // Show success message and reset form
       setTimeout(() => {
-        console.log('Form submitted:', formData);
         setIsSubmitting(false);
         setSubmitSuccess(true);
         
@@ -92,7 +98,7 @@ const Contact: React.FC = () => {
         setTimeout(() => {
           setSubmitSuccess(false);
         }, 5000);
-      }, 1000);
+      }, 500);
     }
   };
 
@@ -111,7 +117,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="contact-label">טלפון</p>
-                <a href="tel:+972-50-123-4567" className="contact-value">050-123-4567</a>
+                <a href="tel:+972-54-590-7677" className="contact-value">054-590-7677</a>
               </div>
             </div>
             <div className="contact-item">
@@ -122,7 +128,7 @@ const Contact: React.FC = () => {
               </div>
               <div>
                 <p className="contact-label">WhatsApp</p>
-                <a href="https://wa.me/972501234567" target="_blank" rel="noopener noreferrer" className="contact-value">050-123-4567</a>
+                <a href="https://wa.me/972545907677" target="_blank" rel="noopener noreferrer" className="contact-value">054-590-7677</a>
               </div>
             </div>
             <div className="contact-item">
@@ -155,7 +161,7 @@ const Contact: React.FC = () => {
             <form className="contact-form" onSubmit={handleSubmit}>
               {submitSuccess && (
                 <div className="success-message">
-                  ההודעה נשלחה בהצלחה! ניצור איתך קשר בהקדם.
+                  הפנייה נשלחה בהצלחה לוואטסאפ! ניצור איתך קשר בהקדם.
                 </div>
               )}
 

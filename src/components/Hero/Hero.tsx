@@ -3,11 +3,11 @@ import './Hero.scss';
 
 const Hero: React.FC = () => {
   const handleCallClick = () => {
-    window.location.href = 'tel:+972-50-123-4567';
+    window.location.href = 'tel:+972-54-590-7677';
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/972501234567?text=שלום, אני מעוניין בהתקנת דוד שמש', '_blank');
+    window.open('https://wa.me/972545907677?text=שלום, אני מעוניין בהתקנת דוד שמש', '_blank');
   };
 
   return (
@@ -20,10 +20,10 @@ const Hero: React.FC = () => {
             <span className="badge-text">יצא צדיק</span>
           </div>
           <h1 className="hero-title">
-            מומחים להתקנה ותיקון דודי שמש
+            מומחים להתקנת דודי שמש
           </h1>
           <p className="hero-subtitle">
-            מעל 15 שנות ניסיון | התקנה מקצועית | תיקונים ואחזקה | אחריות מלאה
+            מעל 5 שנות ניסיון | התקנה מקצועית | תיקונים ואחזקה | אחריות מלאה
           </p>
           <div className="hero-cta">
             <button className="btn btn-primary hero-call-btn" onClick={handleCallClick}>

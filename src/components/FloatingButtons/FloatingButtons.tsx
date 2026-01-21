@@ -21,11 +21,11 @@ const FloatingButtons: React.FC = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/972501234567?text=שלום, אני מעוניין בשירותי אינסטלציה', '_blank');
+    window.open('https://wa.me/972545907677?text=שלום, אני מעוניין בהתקנת דוד שמש', '_blank');
   };
 
   const handlePhoneClick = () => {
-    window.location.href = 'tel:+972-50-123-4567';
+    window.location.href = 'tel:+972-54-590-7677';
   };
 
   return (

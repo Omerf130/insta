@@ -171,7 +171,25 @@
   .footer-copyright {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
+    margin: 0 0 10px 0;
+  }
+  
+  .footer-credit {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
     margin: 0;
+    
+    .credit-link {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
