@@ -8,7 +8,18 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   overflow: hidden;
+  
+  // Fix for iOS Safari - background-attachment: fixed doesn't work on iOS
+  @media (max-width: 1024px) {
+    background-attachment: scroll;
+  }
+  
+  // Additional iOS-specific fix
+  @supports (-webkit-touch-callout: none) {
+    background-attachment: scroll;
+  }
   
   // Background pattern overlay
   &::before {
